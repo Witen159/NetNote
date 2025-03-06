@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+        "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+        "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<module name="Checker">
+
+    <property name="fileExtensions" value="java"/>
+    <module name="BeforeExecutionExclusionFileFilter">
+        <property name="fileNamePattern" value="((.*Test\.java)|(Test.*\.java))$"/>
+    </module>
+
+    <module name="TreeWalker">
+        <!-- 1. Check for unused imports -->
+        <module name="UnusedImports">
+            <property name="severity" value="error"/>
+        </module>
+
+        <!-- 2. Check for unused local variables -->
+        <module name="UnusedLocalVariable">
+            <property name="severity" value="error"/>
+        </module>
+
+        <!-- 3. Enforce method naming conventions -->
+        <module name="MethodName">
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
+            <property name="severity" value="error"/>
+        </module>
+
+        <!-- 4. Enforce naming conventions for class members -->
+        <module name="MemberName">
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
+            <property name="severity" value="error"/>
+        </module>
+
+        <!-- 5. Enforce naming conventions for method parameters -->
+        <module name="ParameterName">
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
+            <property name="severity" value="error"/>
+        </module>
+
+        <!-- 6. Enforce naming conventions for local variables -->
+        <module name="LocalVariableName">
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
+            <property name="severity" value="error"/>
+        </module>
+
+        <!-- 7. Enforce naming conventions for static variables -->
+        <module name="StaticVariableName">
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
+            <property name="severity" value="error"/>
+        </module>
+
+        <!-- 8. Enforce naming conventions for lambda parameters -->
+        <module name="LambdaParameterName">
+            <property name="format" value="[_a-zA-Z][_a-zA-Z0-9]*" />
+            <property name="severity" value="error"/>
+        </module>
+
+        <!-- 9. Enforce naming conventions for class type parameters -->
+        <module name="ClassTypeParameterName">
+            <property name="format" value="^[A-Z]$"/>
+            <property name="severity" value="error"/>
+        </module>
+
+        <!-- 10. Enforce naming conventions for class and interface names -->
+        <module name="TypeName">
+            <property name="format" value="^[A-Z][a-zA-Z0-9]*$"/>
+            <property name="severity" value="error"/>
+        </module>
+
+        <!-- 11. Check for missing hashCode and equals methods -->
+        <module name="EqualsHashCode">
+            <property name="severity" value="error"/>
+        </module>
+
+        <!-- 12. Check for empty catch blocks -->
+        <module name="EmptyCatchBlock">
+            <property name="severity" value="error"/>
+        </module>
+
+        <!-- 13. Check for string literal equality -->
+        <module name="StringLiteralEquality">
+            <property name="severity" value="error"/>
+        </module>
+
+        <!-- 14. Check for missing switch default -->
+        <module name="MissingSwitchDefault">
+            <property name="severity" value="error"/>
+        </module>
+
+        <!-- 15. Enforce proper indentation -->
+        <module name="Indentation">
+            <property name="severity" value="error"/>
+        </module>
+
+        <!-- 16. Enforce proper comments indentation -->
+        <module name="CommentsIndentation">
+            <property name="severity" value="error"/>
+        </module>
+
+        <!-- 17. Enforce Javadoc for methods -->
+        <module name="JavadocMethod">
+            <property name="allowMissingParamTags" value="false"/>
+            <property name="allowMissingReturnTag" value="false"/>
+            <property name="severity" value="error"/>
+        </module>
+
+        <!-- 18. Enforce Javadoc style -->
+        <module name="JavadocStyle">
+            <property name="severity" value="error"/>
+        </module>
+
+        <!-- 19. Check for missing Javadoc on all methods -->
+        <module name="MissingJavadocMethod">
+            <property name="severity" value="error"/>
+            <property name="scope" value="private"/>
+            <property name="minLineCount" value="0"/>
+            <property name="tokens" value="METHOD_DEF, CTOR_DEF, COMPACT_CTOR_DEF"/>
+        </module>
+
+        <!-- 20. Check for cyclomatic complexity -->
+        <module name="CyclomaticComplexity">
+            <property name="severity" value="error"/>
+            <property name="switchBlockAsSingleDecisionPoint" value="true"/>
+            <property name="max" value="11"/>
+            <property name="tokens" value="LITERAL_WHILE, LITERAL_DO, LITERAL_FOR, LITERAL_IF, LITERAL_SWITCH, LITERAL_CASE, QUESTION"/>
+        </module>
+
+        <!-- 21. Enforce maximum method length -->
+        <module name="MethodLength">
+            <property name="severity" value="error"/>
+            <property name="tokens" value="METHOD_DEF, CTOR_DEF, COMPACT_CTOR_DEF"/>
+            <property name="max" value="100"/>
+        </module>
+
+        <!-- 22. Enforce a maximum number of parameters for methods -->
+        <module name="ParameterNumber">
+            <property name="severity" value="error"/>
+            <property name="tokens" value="METHOD_DEF, CTOR_DEF"/>
+            <property name="max" value="8"/>
+        </module>
+
+        <!-- 23. Limit the depth of nested if statements -->
+        <module name="NestedIfDepth">
+            <property name="max" value="2"/>
+            <property name="severity" value="error"/>
+        </module>
+    </module>
+
+    <!-- 24. Enforce maximum line length -->
+    <module name="LineLength">
+        <property name="severity" value="error"/>
+        <property name="fileExtensions" value="java"/>
+        <property name="max" value="100"/>
+        <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>
+    </module>
+
+</module>

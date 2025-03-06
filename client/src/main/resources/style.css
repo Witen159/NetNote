@@ -1,0 +1,10 @@
+body {
+    font-family: Arial, serif;
+    line-height: 1.6;
+    margin: 10px
+}
+
+h1, h2, h3 {
+    color: #2c3e70;
+    text-align: left;
+}
