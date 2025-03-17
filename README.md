@@ -1,6 +1,6 @@
 # NetNote application
 
-This repository contains a clone of a study project for Delft Technical University (CSE1105 Collaborative Software Engineering Project). Thw project was done in a private GitLab repository as a part of developer team.
+This repository contains a clone of a study project for Delft Technical University (CSE1105 Collaborative Software Engineering Project). The project was done in a private university GitLab repository as a part of developer team.
 
 This is a Client-server note-taking and organization application that allows users to create, edit, and manage notes efficiently. It supports collections, tags, and markdown rendering. Notes are automatically saved and synchronized in real-time across multiple clients. Users can filter notes, switch between three languages, and upload images. The app includes keyboard shortcuts, undo/redo functionality, and informative pop-ups for errors and confirmations. It requires a running server to function properly and provides a structured way to manage notes with an intuitive interface.
 
