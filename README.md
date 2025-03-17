@@ -1,6 +1,8 @@
 # NetNote application
 
-This repository contains a study project for Delft Technical University. 
+This repository contains a study project for Delft Technical University (CSE1105 Collaborative Software Engineering Project). 
+
+This application is a note-taking and organization tool that allows users to create, edit, and manage notes efficiently. It supports collections, tags, and markdown rendering. Notes are automatically saved and synchronized in real-time across multiple clients. Users can filter notes, switch between three languages, and upload images. The app includes keyboard shortcuts, undo/redo functionality, and informative pop-ups for errors and confirmations. It requires a running server to function properly and provides a structured way to manage notes with an intuitive interface.
 
 To run the project from the command line, you either need to
 have [Maven](https://maven.apache.org/install.html) installed on your local system (`mvn`) or you need to use the Maven
@@ -18,14 +20,14 @@ to start the server or ...
 	cd client
 	mvn javafx:run
 
-to run the client. Please note that the server needs to be running, before you can start the client.
+to run the client. Please note that while server doesn't need to be running for client to work, it is needed for it's full functionality and correct work.
 
-Once this is working, you can try importing the project into your favorite IDE.
+Once this is working, you can also importing the project into your prefferable IDE.
 
 # Key Features
 
 - Create, edit and delete notes
-- Create, edit and delete collections
+- Create, edit and delete collections of notes
 - Create, edit and delete tags
 - Supports live updates of the rendered view for note contents
 - Automatic saving of notes, collections and tags
@@ -61,7 +63,7 @@ exits the note. There is a choiceBox with which the user can choose the tags to 
 choose multiple tags, and the selected tags are shown in the label "Selected Tags". The "Clear Tags" button clears the
 selection of tags, so notes are no longer filtered by tags.
 
-WARNING: Selecting or cycling tags gives warnings.
+WARNING: Selecting or cycling tags gives warnings in the console.
 
 ## Automated Change Synchronization
 
@@ -70,7 +72,7 @@ using a websocket connection. Changes to note titles are immediately synchronize
 as well as note additions and deletions.
 
 WARNING: Do not close the app within 3 seconds after modifying it, as it will only close the window and not the
-background process in Intelij.
+background processes.
 
 ## Live Language Switch
 
@@ -86,10 +88,6 @@ good user experience by allowing users to resume their work exactly where they l
 reselect their preferred language or collection.
 
 # Usability
-
-## Color Contrast
-
-There is a single color scheme for the app, as the TA said this is good enough.
 
 ## Keyboard Shortcuts
 
